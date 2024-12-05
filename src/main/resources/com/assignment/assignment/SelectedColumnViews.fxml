@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.assignment.SelectedColumnViewController" style="-fx-background-color: white;">
+    <TableView fx:id="columnTableView" layoutX="700.0" layoutY="7.0" prefHeight="646.8" prefWidth="257.59999999999997" />
+    <VBox layoutX="17.7" layoutY="8.399999999999999" prefHeight="646.8" prefWidth="616.0" spacing="10.0">
+        <children>
+            <HBox spacing="10.0">
+                <Button fx:id="mergeSortButton" mnemonicParsing="false" prefHeight="33.59999999999994" prefWidth="100.8" text="Merge Sort" style="-fx-background-color: #78B3CE;"/>
+                <TextField fx:id="mergeSortTimeTextField" prefHeight="33.59999999999994" prefWidth="222.6" promptText="Merge Sort Time" />
+            </HBox>
+
+            <HBox spacing="10.0">
+                <Button fx:id="quickSortButton" mnemonicParsing="false" prefHeight="33.59999999999994" prefWidth="100.8" text="Quick Sort" style="-fx-background-color: #78B3CE;"/>
+                <TextField fx:id="quickSortTimeTextField" prefHeight="33.59999999999994" prefWidth="222.6" promptText="Quick Sort Time" />
+            </HBox>
+
+            <HBox spacing="10.0">
+                <Button fx:id="insertionSortButton" mnemonicParsing="false" prefHeight="33.59999999999994" prefWidth="100.8" text="Insertion Sort" style="-fx-background-color: #78B3CE;"/>
+                <TextField fx:id="insertionSortTimeTextField" prefHeight="33.59999999999994" prefWidth="222.6" promptText="Insertion Sort Time" />
+            </HBox>
+
+            <HBox spacing="10.0">
+                <Button fx:id="shellSortButton" mnemonicParsing="false" prefHeight="33.59999999999994" prefWidth="100.8" text="Shell Sort" style="-fx-background-color: #78B3CE;"/>
+                <TextField fx:id="shellSortTimeTextField" prefHeight="33.59999999999994" prefWidth="224.7" promptText="Shell Sort Time" />
+            </HBox>
+
+            <HBox spacing="10.0">
+                <Button fx:id="heapSortButton" mnemonicParsing="false" prefHeight="33.59999999999994" prefWidth="100.8" text="Heap Sort" style="-fx-background-color: #78B3CE;"/>
+                <TextField fx:id="heapSortTimeTextField" prefHeight="33.59999999999994" prefWidth="224.7" promptText="Heap Sort Time" />
+            </HBox>
+
+            <!-- Adding BarChart to display sorting times -->
+            <BarChart fx:id="sortingTimeBarChart" layoutX="17.7" prefHeight="428.4" prefWidth="679.6999999999999">
+                <xAxis>
+                    <CategoryAxis label="Sorting Algorithm" />
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Time (ms)" />
+                </yAxis>
+            </BarChart>
+        </children>
+    </VBox>
+</AnchorPane>
